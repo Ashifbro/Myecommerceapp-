@@ -1,3 +1,4 @@
+
 name: Build PWA to APK
 
 on:
@@ -16,3 +17,9 @@ jobs:
           url: "https://YOUR-PWA-APP-URL"
           name: "MyEcommerceApp"
           package: "com.yourname.myecommerceapp"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-apk
+          path: app-release.apk
